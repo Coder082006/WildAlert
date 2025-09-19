@@ -5,46 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wild Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+            background: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
             min-height: 100vh;
+            font-family: 'Montserrat', Arial, sans-serif;
         }
         .bg-overlay {
-            background: rgba(34, 34, 34, 0.7);
+            background: linear-gradient(120deg, rgba(34,34,34,0.95) 60%, rgba(44,44,44,0.85) 100%);
             min-height: 100vh;
         }
         .navbar {
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.95);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 2rem;
+            letter-spacing: 2px;
         }
         .hero {
-            padding: 100px 0 60px 0;
+            padding: 120px 0 80px 0;
             text-align: center;
         }
         .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 24px rgba(0,0,0,0.7);
+        }
+        .hero p.lead {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
         .section {
-            padding: 60px 0;
+            padding: 70px 0;
         }
         .card {
-            background: rgba(44, 44, 44, 0.85);
+            background: rgba(44, 44, 44, 0.92);
             color: #fff;
+            border: none;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+        }
+        .card-img-top {
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+            height: 180px;
+            object-fit: cover;
+        }
+        .services-section .card {
+            min-height: 420px;
+        }
+        .services-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        .services-section .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .services-section .card-text {
+            font-size: 1.1rem;
+        }
+        .features-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        .features-section .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .features-section .card-text {
+            font-size: 1rem;
         }
         footer {
-            background: rgba(0,0,0,0.8);
-            padding: 20px 0;
+            background: rgba(0,0,0,0.95);
+            padding: 30px 0 10px 0;
             text-align: center;
             color: #ccc;
+            font-size: 1rem;
+            letter-spacing: 1px;
         }
         a {
             color: #90caf9;
+            text-decoration: none;
         }
         a:hover {
             color: #fff;
+            text-decoration: underline;
+        }
+        .netflix-row {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            padding-bottom: 2rem;
+        }
+        .netflix-card {
+            min-width: 320px;
+            max-width: 340px;
+            background: rgba(44,44,44,0.96);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+            margin-right: 1rem;
+            transition: transform 0.2s;
+        }
+        .netflix-card:hover {
+            transform: scale(1.04);
+        }
+        .netflix-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+        }
+        .netflix-card-body {
+            padding: 1.2rem;
+        }
+        .netflix-card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+        }
+        .netflix-card-text {
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .services-section h2, .features-section h2 {
+                font-size: 1.5rem;
+            }
+            .netflix-row {
+                gap: 1rem;
+            }
+            .netflix-card {
+                min-width: 90vw;
+                max-width: 95vw;
+            }
         }
     </style>
 </head>
@@ -70,44 +181,90 @@
         <section class="hero">
             <div class="container">
                 <h1>Welcome to Wild</h1>
-                <p class="lead">An advanced, nature-inspired web project for everyone.</p>
-                <a href="#about" class="btn btn-primary btn-lg mt-3">Learn More</a>
+                <p class="lead">A next-generation, nature-inspired web platform for real-time alerts, services, and community engagement.</p>
+                <a href="#services" class="btn btn-danger btn-lg mt-3" style="font-weight:700;letter-spacing:1px;">Explore Services</a>
             </div>
         </section>
 
         <section id="about" class="section">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card p-4">
+                    <div class="col-md-9">
+                        <div class="card p-5">
                             <h2>About Wild</h2>
-                            <p>Wild is a visually stunning, responsive web application designed to showcase your project and engage visitors. Inspired by the untamed beauty of nature, Wild combines modern design, advanced features, and clear information to help users understand your vision.</p>
+                            <p>Wild is a production-ready, advanced web platform designed for real-time alerts, environmental monitoring, and community-driven services. Inspired by the untamed beauty of nature, Wild combines modern design, interactive features, and robust backend technology to deliver a seamless experience for users and organizations.</p>
+                            <ul>
+                                <li>Real-time notifications and alerts</li>
+                                <li>Service discovery and quick access</li>
+                                <li>Community engagement and reporting</li>
+                                <li>Mobile-first, responsive design</li>
+                                <li>Secure, scalable, and customizable</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="section services-section">
+            <div class="container">
+                <h2 class="text-center">Our Services</h2>
+                <div class="netflix-row">
+                    <div class="netflix-card">
+                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Wild Alert">
+                        <div class="netflix-card-body">
+                            <div class="netflix-card-title">Wild Alert</div>
+                            <div class="netflix-card-text">Receive instant notifications about wildfires, storms, and environmental hazards in your area. Stay safe and informed with real-time updates.</div>
+                            <a href="#" class="btn btn-outline-danger btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="netflix-card">
+                        <img src="https://images.unsplash.com/photo-1465101178521-c1a4c8a0f8f5?auto=format&fit=crop&w=800&q=80" alt="Community Reporting">
+                        <div class="netflix-card-body">
+                            <div class="netflix-card-title">Community Reporting</div>
+                            <div class="netflix-card-text">Empower users to report incidents, share sightings, and contribute to a safer environment. All reports are verified and mapped for public awareness.</div>
+                            <a href="#" class="btn btn-outline-danger btn-sm">Get Involved</a>
+                        </div>
+                    </div>
+                    <div class="netflix-card">
+                        <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="Resource Finder">
+                        <div class="netflix-card-body">
+                            <div class="netflix-card-title">Resource Finder</div>
+                            <div class="netflix-card-text">Locate nearby shelters, emergency services, and resources with our interactive map and quick-access tools. Designed for speed and reliability.</div>
+                            <a href="#" class="btn btn-outline-danger btn-sm">Find Resources</a>
+                        </div>
+                    </div>
+                    <div class="netflix-card">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Wildlife Tracker">
+                        <div class="netflix-card-body">
+                            <div class="netflix-card-title">Wildlife Tracker</div>
+                            <div class="netflix-card-text">Track wildlife movements, migration patterns, and receive updates on conservation efforts. Connect with experts and enthusiasts.</div>
+                            <a href="#" class="btn btn-outline-danger btn-sm">Track Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="section">
+        <section id="features" class="section features-section">
             <div class="container">
-                <h2 class="text-center mb-5">Features</h2>
+                <h2 class="text-center mb-5">Platform Features</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
-                        <div class="card h-100 p-3">
-                            <h4>Stunning Background</h4>
-                            <p>Full-screen, high-resolution nature image for instant impact.</p>
+                        <div class="card h-100 p-4">
+                            <div class="card-title">Stunning Visuals</div>
+                            <div class="card-text">Full-screen, high-resolution backgrounds and immersive UI inspired by Netflix and nature.</div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card h-100 p-3">
-                            <h4>Responsive Design</h4>
-                            <p>Optimized for desktop, tablet, and mobile devices.</p>
+                        <div class="card h-100 p-4">
+                            <div class="card-title">Real-Time Data</div>
+                            <div class="card-text">Instant alerts, live updates, and interactive maps for maximum situational awareness.</div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card h-100 p-3">
-                            <h4>Clear Project Overview</h4>
-                            <p>Easy-to-understand sections for users and contributors.</p>
+                        <div class="card h-100 p-4">
+                            <div class="card-title">Community Driven</div>
+                            <div class="card-text">User reporting, feedback, and engagement tools to build a safer, more connected world.</div>
                         </div>
                     </div>
                 </div>
@@ -117,14 +274,15 @@
         <section id="how" class="section">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card p-4">
+                    <div class="col-md-9">
+                        <div class="card p-5">
                             <h2>How It Works</h2>
                             <ol>
-                                <li>Clone the repository and install dependencies.</li>
-                                <li>Run the application using Python.</li>
-                                <li>Visit the website and explore the features.</li>
-                                <li>Contribute or customize as you wish!</li>
+                                <li><strong>Clone & Install:</strong> Download the repository and install all dependencies.</li>
+                                <li><strong>Run the App:</strong> Start the Python backend and launch the web platform.</li>
+                                <li><strong>Explore Services:</strong> Access alerts, resources, and community features instantly.</li>
+                                <li><strong>Contribute:</strong> Fork the repo, submit pull requests, and help us grow!</li>
+                                <li><strong>Production Ready:</strong> Deploy on cloud or on-premises for organizations and communities.</li>
                             </ol>
                         </div>
                     </div>
