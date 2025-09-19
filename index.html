@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .bg-overlay {
+            background: rgba(34, 34, 34, 0.7);
+            min-height: 100vh;
+        }
+        .navbar {
+            background: rgba(0,0,0,0.8);
+        }
+        .hero {
+            padding: 100px 0 60px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .card {
+            background: rgba(44, 44, 44, 0.85);
+            color: #fff;
+        }
+        footer {
+            background: rgba(0,0,0,0.8);
+            padding: 20px 0;
+            text-align: center;
+            color: #ccc;
+        }
+        a {
+            color: #90caf9;
+        }
+        a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Wild</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#how">How It Works</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to Wild</h1>
+                <p class="lead">An advanced, nature-inspired web project for everyone.</p>
+                <a href="#about" class="btn btn-primary btn-lg mt-3">Learn More</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card p-4">
+                            <h2>About Wild</h2>
+                            <p>Wild is a visually stunning, responsive web application designed to showcase your project and engage visitors. Inspired by the untamed beauty of nature, Wild combines modern design, advanced features, and clear information to help users understand your vision.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="text-center mb-5">Features</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3">
+                            <h4>Stunning Background</h4>
+                            <p>Full-screen, high-resolution nature image for instant impact.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3">
+                            <h4>Responsive Design</h4>
+                            <p>Optimized for desktop, tablet, and mobile devices.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3">
+                            <h4>Clear Project Overview</h4>
+                            <p>Easy-to-understand sections for users and contributors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how" class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card p-4">
+                            <h2>How It Works</h2>
+                            <ol>
+                                <li>Clone the repository and install dependencies.</li>
+                                <li>Run the application using Python.</li>
+                                <li>Visit the website and explore the features.</li>
+                                <li>Contribute or customize as you wish!</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card p-4">
+                            <h2>Contact & Social</h2>
+                            <ul class="list-unstyled">
+                                <li><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">yourusername</a></li>
+                                <li><strong>Email:</strong> <a href="mailto:your@email.com">your@email.com</a></li>
+                            </ul>
+                            <p>We welcome contributions! Fork the repo and help us make Wild even better.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Wild Project. MIT License. Inspired by nature.</p>
+                <small>"In the wilderness lies the hope of the world." – John Muir</small>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
